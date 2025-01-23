@@ -151,7 +151,7 @@ app.put("/edit/:id", async(req, res)=>{
 app.delete("/delete/:id", async(req, res)=>{
   try {
     await PayTracker.deleteOne({ _id: req.params.id });
-    res.redirect("/");
+    res.redirect("/admin/index");
   } catch (error) {
     console.log(error);
   }
