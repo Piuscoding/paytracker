@@ -69,7 +69,7 @@ app.post("/Create", async(req, res)=>{
     mstatus: req.body.mstatus,
   });
   await PayTracker.create(newPaytracker);
-  res.redirect("/");
+  res.redirect("/admin/index");
 })
 
 
