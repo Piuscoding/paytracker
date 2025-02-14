@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
-app.get("/admin/adminRoute", async(req, res)=>{
+app.get("/admin/adminlogs", async(req, res)=>{
   let perPage = 12;
   let page = req.query.page || 1;
 
@@ -69,7 +69,7 @@ app.post("/Create", async(req, res)=>{
     mstatus: req.body.mstatus,
   });
   await PayTracker.create(newPaytracker);
-  res.redirect("/admin/index");
+  res.redirect("/admin/adminlogs");
 })
 
 
