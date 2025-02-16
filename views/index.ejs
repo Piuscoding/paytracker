@@ -104,24 +104,24 @@
   
         <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
         <% if(i !== 1) { %>
-          <li class="page-item disabled"><a href="/adminlons" class="page-link">...</a></li>
+          <li class="page-item disabled"><a href="/admin/adminlons" class="page-link">...</a></li>
         <% } %>
   
         <% for(; i <= (Number(current) + 4) && i <= pages; i++ ) { %>
           <% if (i == current) { %>
             <li class="page-item disabled"><a href="#" class="page-link"><%= i %></a></li>
           <% } else { %>
-            <li class="page-item"><a href="/adminlons?page=<%= i %>" class="page-link"><%= i %></a></li>
+            <li class="page-item"><a href="/admin/adminlons?page=<%= i %>" class="page-link"><%= i %></a></li>
           <% } %>
           <% if (i == Number(current) + 4 && i < pages) { %>
-            <li class="page-item disabled"><a href="/adminlons" class="page-link">...</a></li>
+            <li class="page-item disabled"><a href="/admin/adminlons" class="page-link">...</a></li>
           <% } %>
         <% } %>
   
         <% if (current == pages) { %>
           <li class="page-item disabled"><a href="#" class="page-link">Last</a></li>
         <% } else { %>
-          <li class="page-item"><a href="/adminlons?page=<%= pages %>" class="page-link">Last</a></li>
+          <li class="page-item"><a href="/admin/adminlons?page=<%= pages %>" class="page-link">Last</a></li>
         <% } %>
   
       </ul>
