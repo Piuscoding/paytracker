@@ -69,7 +69,7 @@ app.post("/Create", async(req, res)=>{
     mstatus: req.body.mstatus,
   });
   await PayTracker.create(newPaytracker);
-  res.redirect("/admin/adminlons");
+  res.redirect("/admin/adminlogs");
 })
 
 
@@ -151,7 +151,7 @@ app.put("/edit/:id", async(req, res)=>{
 app.delete("/delete/:id", async(req, res)=>{
   try {
     await PayTracker.deleteOne({ _id: req.params.id });
-    res.redirect("/admin/adminlons");
+    res.redirect("/admin/adminlogs");
   } catch (error) {
     console.log(error);
   }
