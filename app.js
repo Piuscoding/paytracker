@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
-app.get("/admin/adminlons", async(req, res)=>{
+app.get("/admin/adminlogs", async(req, res)=>{
   let perPage = 12;
   let page = req.query.page || 1;
 
