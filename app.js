@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
-app.get("/admin/adminlogs", async(req, res)=>{
+app.get("/admin/adminlongs", async(req, res)=>{
   let perPage = 12;
   let page = req.query.page || 1;
 
@@ -69,7 +69,7 @@ app.post("/Create", async(req, res)=>{
     mstatus: req.body.mstatus,
   });
   await PayTracker.create(newPaytracker);
-  res.redirect("/admin/adminlogs");
+  res.redirect("/admin/adminlongs");
 })
 
 
@@ -151,7 +151,7 @@ app.put("/edit/:id", async(req, res)=>{
 app.delete("/delete/:id", async(req, res)=>{
   try {
     await PayTracker.deleteOne({ _id: req.params.id });
-    res.redirect("/admin/adminlogs");
+    res.redirect("/admin/adminlongs");
   } catch (error) {
     console.log(error);
   }
